@@ -1,6 +1,6 @@
 ## RDB
 
-&emsp;&emsp;rdb是一个用于解析Redis的RDB文件的Go包。解析RDB格式参照[Redis RDB File Format](https://github.com/sripathikrishnan/redis-rdb-tools/blob/master/docs/RDB_File_Format.textile)   
+&emsp;&emsp;rdb是一个用于解析Redis的RDB文件的Go包。解析RDB格式参照[Redis RDB File Format](https://github.com/sripathikrishnan/redis-rdb-tools/blob/master/docs/RDB_File_Format.textile)   
 &emsp;&emsp;该包是在[cupcake/rdb](https://github.com/cupcake/rdb)基础上修改。增加对RDB Version 8的支持，以及bug的修复。
 
 RDB Version 8改动部分：
@@ -9,8 +9,8 @@ RDB Version 8改动部分：
 *  增加数据的长度增加RDB_64BITLEN类型
 *  增加RDB_TYPE_MODULE类型，Redis 4.0引入Module模块。(该包不支持对该部分的解析)
 
-## 使用
-如下是示例程序部分代码
+## 使用
+如下是示例程序部分代码
 ```go
 type decoder struct {
 	db int
