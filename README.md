@@ -1,11 +1,11 @@
 ## RDB
 
 &emsp;&emsp;rdb是一个用于解析Redis的RDB文件的Go包。解析RDB格式参照[Redis RDB File Format](https://github.com/sripathikrishnan/redis-rdb-tools/blob/master/docs/RDB_File_Format.textile)   
-&emsp;&emsp;该包是在[cupcake/rdb](https://github.com/cupcake/rdb)基础上修改。增加对RDB Version 8的支持，以及bug的修复。
+&emsp;&emsp;该包是在[cupcake/rdb](https://github.com/cupcake/rdb)基础上修改。增加对RDB Version 8的支持，以及bug的修复。
 
 RDB Version 8改动部分：
-*  Lua脚本可以持久化到RDB文件中，类型为RDB_OPCODE_AUX，以key-value的形式持久化。其中，key为"lua"，value为对应的脚本内容
-*  增加RDB_TYPE_ZSET_2类型，浮点类型不在以字符串的形式保存，而是以binary形式保存到RDB中去
+*  Lua脚本可以持久化到RDB文件中，类型为RDB_OPCODE_AUX，以key-value的形式持久化。其中，key为"lua"，value为对应的脚本内容
+*  增加RDB_TYPE_ZSET_2类型，浮点类型不在以字符串的形式保存，而是以binary形式保存到RDB中去
 *  增加数据的长度增加RDB_64BITLEN类型
 *  增加RDB_TYPE_MODULE类型，Redis 4.0引入Module模块。(该包不支持对该部分的解析)
 
