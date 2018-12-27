@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 	"os"
-	"rdb"
+	"github.com/BrotherGao/RDB"
 
 	"github.com/BrotherGao/RDB/nopdecoder"
 )
